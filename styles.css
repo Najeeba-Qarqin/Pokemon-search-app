@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 5px;
+  border-bottom: double orange;
+}
+
+h3,
+a {
+  color: orange;
+  font-weight: 900;
+  text-decoration-line: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.container label {
+  font-size: 15px;
+  margin: 2px;
+}
+
+.form {
+  padding: 10px;
+}
+
+.form input {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.form button {
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: white;
+}
+
+.name-and-id {
+  text-align: center;
+  padding: 10px;
+  font-weight: 900;
+}
+
+.size span {
+  margin: 10px;
+  font-size: 15px;
+}
+
+.sprite-container {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sprite-container img {
+  width: 250px;
+  height: auto;
+}
+
+.sprite-container img:hover {
+  width: 300px;
+}
+
+#types {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+table {
+  width: 90%;
+  margin: 30px;
+}
+
+table td,
+th {
+  border: 3px solid lightgray;
+  padding: 6px;
+  text-align: center;
+  border-radius: 10px;
+  width: 50%;
+  background-color: orange;
+}
+
+@media (min-width: 700px) {
+  .bottom-container {
+    width: 60%;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .container label {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .container {
+    width: 30%;
+    margin: 90px 0 0 120px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  .size {
+    display: flex;
+    flex-direction: row;
+  }
+
+  table {
+    width: 45%;
+  }
+
+  table td,
+  th {
+    padding: 14px;
+    font-weight: 800;
+  }
+
+  .bottom-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

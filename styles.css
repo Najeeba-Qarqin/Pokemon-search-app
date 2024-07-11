@@ -37,3 +37,31 @@ a {
 a:hover {
   color: white;
 }
+
+.container label {
+  font-size: 15px;
+  margin: 2px;
+}
+
+.form {
+  padding: 10px;
+}
+
+.form input {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.form button {
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background-color: orange;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: white;
+}

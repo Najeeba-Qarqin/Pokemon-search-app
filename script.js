@@ -1,4 +1,4 @@
-const searchInput = document.getElementById('search-input')
+const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const pokemonName = document.getElementById('pokemon-name');
 const pokemonId = document.getElementById('pokemon-id');
@@ -17,22 +17,19 @@ searchInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
     searchButton.click();
   }
-})
+});
 
-const fetchData = async () => {
-  try {
-    const pokemonNameOrId = searchInput.value.toLowerCase();
-    const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`);
-    const data = await res.json();
-    getPokemonData(data);
+const getPokemonData = (data) => {
 
-  } catch (err) {
-    alert('Pokémon not found');
-  }
-};
-
-const getPokemonData = data => {
-  const { name, id, weight, height, sprites, types, stats } = data;
+  const {
+    name,
+    id,
+    weight,
+    height,
+    sprites,
+    types,
+    stats,
+  } = data;
 
   pokemonName.textContent = name.toUpperCase();
   pokemonId.textContent = `#${id}`;
@@ -48,10 +45,21 @@ const getPokemonData = data => {
   specialDefense.textContent = stats[4].base_stat;
   speed.textContent = stats[5].base_stat;
 
-  pokemonTypes.innerHTML = types.map(obj => `<span>${obj.type.name.toUpperCase()}</span>`).join(' ');
+  pokemonTypes.innerHTML = types.map((obj) => `<span>${obj.type.name.toUpperCase()}</span>`).join(' ');
 };
 
-searchButton.addEventListener('click', e => {
+const fetchData = async () => {
+  try {
+    const pokemonNameOrId = searchInput.value.toLowerCase();
+    const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`);
+    const data = await res.json();
+    getPokemonData(data);
+  } catch (err) {
+    alert('Pokémon not found');
+  }
+};
+
+searchButton.addEventListener('click', (e) => {
   e.preventDefault();
   fetchData();
 });

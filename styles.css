@@ -123,3 +123,9 @@ th {
   width: 50%;
   background-color: orange;
 }
+
+@media (min-width: 700px) {
+  .bottom-container {
+    width: 60%;
+  }
+}

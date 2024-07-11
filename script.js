@@ -20,7 +20,6 @@ searchInput.addEventListener('keydown', (e) => {
 });
 
 const getPokemonData = (data) => {
-
   const {
     name,
     id,

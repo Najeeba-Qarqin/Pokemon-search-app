@@ -12,3 +12,21 @@ const defense = document.getElementById('defense');
 const specialAttack = document.getElementById('special-attack');
 const specialDefense = document.getElementById('special-defense');
 const speed = document.getElementById('speed');
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    searchButton.click();
+  }
+})
+
+const fetchData = async () => {
+  try {
+    const pokemonNameOrId = searchInput.value.toLowerCase();
+    const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${pokemonNameOrId}`);
+    const data = await res.json();
+    getPokemonData(data);
+
+  } catch (err) {
+    alert("Pokémon not found");
+  }
+};

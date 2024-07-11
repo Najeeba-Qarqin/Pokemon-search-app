@@ -30,3 +30,23 @@ const fetchData = async () => {
     alert("Pokémon not found");
   }
 };
+
+const getPokemonData = data => {
+  const { name, id, weight, height, sprites, types, stats } = data;
+
+  pokemonName.textContent = name.toUpperCase();
+  pokemonId.textContent = `#${id}`;
+  pokemonWeight.textContent = `Weight: ${weight}`;
+  pokemonHeight.textContent = `Height: ${height}`;
+
+  sprite.innerHTML = `<img id="sprite" src ="${sprites.front_default}">`;
+
+  hp.textContent = stats[0].base_stat;
+  attack.textContent = stats[1].base_stat;
+  defense.textContent = stats[2].base_stat;
+  specialAttack.textContent = stats[3].base_stat;
+  specialDefense.textContent = stats[4].base_stat;
+  speed.textContent = stats[5].base_stat;
+
+  pokemonTypes.innerHTML = types.map(obj => `<span>${obj.type.name.toUpperCase()}</span>`).join(' ');
+};

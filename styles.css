@@ -129,3 +129,58 @@ th {
     width: 60%;
   }
 }
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .container label {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .container {
+    width: 30%;
+    margin: 90px 0 0 120px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  .size {
+    display: flex;
+    flex-direction: row;
+  }
+
+  table {
+    width: 45%;
+  }
+
+  table td,
+  th {
+    padding: 14px;
+    font-weight: 800;
+  }
+
+  .bottom-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}

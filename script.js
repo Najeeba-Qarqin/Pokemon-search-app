@@ -27,7 +27,7 @@ const fetchData = async () => {
     getPokemonData(data);
 
   } catch (err) {
-    alert("Pokémon not found");
+    alert('Pokémon not found');
   }
 };
 
@@ -39,7 +39,7 @@ const getPokemonData = data => {
   pokemonWeight.textContent = `Weight: ${weight}`;
   pokemonHeight.textContent = `Height: ${height}`;
 
-  sprite.innerHTML = `<img id="sprite" src ="${sprites.front_default}">`;
+  sprite.innerHTML = `<img id='sprite' src ='${sprites.front_default}'>`;
 
   hp.textContent = stats[0].base_stat;
   attack.textContent = stats[1].base_stat;
@@ -50,3 +50,8 @@ const getPokemonData = data => {
 
   pokemonTypes.innerHTML = types.map(obj => `<span>${obj.type.name.toUpperCase()}</span>`).join(' ');
 };
+
+searchButton.addEventListener('click', e => {
+  e.preventDefault();
+  fetchData();
+});

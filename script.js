@@ -45,6 +45,7 @@ const getPokemonData = (data) => {
   speed.textContent = stats[5].base_stat;
 
   pokemonTypes.innerHTML = types.map((obj) => `<span>${obj.type.name.toUpperCase()}</span>`).join(' ');
+  pokemonTypes.style.backgroundColor = 'orange';
 };
 
 const fetchData = async () => {
